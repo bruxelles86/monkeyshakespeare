@@ -11,24 +11,27 @@ required_letters = list(string.ascii_letters)
 
 with open('./shakespeare/samples.json') as f:
   lines_to_check = json.load(f)
-  print(lines_to_check)
 
+def check(keystroke, counter, lines_to_check):
+  def check_line(line):
+    if line[counter - 1].lower() == keystroke:
+      return True
+    else:
+      return False
 
-def check(keystroke, count, lines_to_check):
+  new_lines_to_check = {"works": []}
+
   for work in lines_to_check["works"]:
-    for line in work["lines"]:
+    matched_lines = list(filter(check_line, work["lines"]))
+    new_work = { 
+      "name": work["name"],
+      "lines": matched_lines
+    }
+    new_lines_to_check["works"].append(new_work)
+  return new_lines_to_check       
       
 
-  # directory = "./shakespeare"
-  # for filename in os.listdir(directory):
-  #   file = open(os.path.join(directory, filename), "r")
-  #   for line in file:
-  #     characters = list(line)
-  #     chars_letters_only = [char for char in characters if char in required_letters]
-  #     if (len(chars_letters_only) < count):
-  #       continue
-  #     if (chars_letters_only[count-1] == keystroke):
-  #       print(chars_letters_only[count-1], "found on count", count)
+
 
 #generates letter
 def generate_keystroke():
@@ -36,9 +39,11 @@ def generate_keystroke():
     
 while True:
   while any(len(work["lines"]) > 0 for work in lines_to_check["works"]):
-    counter += 1
+    counter+=1
     key = generate_keystroke()
-    check(key, counter, lines_to_check)
+    matched_lines = check(key, counter, lines_to_check)
+    lines_to_check = matched_lines
+    print(lines_to_check, counter, key)
 
   # if lines_to_check is empty, reload lines_to_check from file
   # check if match > longestMatch
