@@ -28,24 +28,3 @@ end
  
 #Simlilar attempts link https://www.telegraph.co.uk/technology/news/8789894/Monkeys-at-typewriters-close-to-reproducing-Shakespeare.html
 
-#### steps to show how it works
-{'works': [
-    {'lines': [], 'name': 'sample1'},
-    {
-     'lines': [
-        'Mel ex intellegebat consectetuer concludaturque.',
-        'Mutat graeco te ius, inermis omittam adversarium vel ex.',
-        'Ex per harum fastidii referrentur, ut vix agam alterum ocurreret.'
-        ],
-     'name': 'sample2'}]} 149 g
-
-{'works': [
-    {'lines': [], 'name': 'sample1'},
-    {'lines': ['Mel ex intellegebat consectetuer concludaturque.'],
-    'name': 'sample2'}]} 149 b
-    
-{'works': [{'lines': [], 'name': 'sample1'}, {'lines': ['Mel ex intellegebat consectetuer concludaturque.'], 'name': 'sample2'}]} 149 t
-{'works': [{'lines': [], 'name': 'sample1'}, {'lines': [], 'name': 'sample2'}]} 149 y
-started again 150
-{'works': [{'lines': [], 'name': 'sample1'}, {'lines': [], 'name': 'sample2'}]} 150 k
-started again 151

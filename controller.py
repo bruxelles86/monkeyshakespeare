@@ -3,18 +3,13 @@ import random
 import os
 import json
 
-
 counter = 0
 longestMatch = ""
-
 required_letters = list(string.ascii_letters)
-
-#  created a method to load json object from sample
 
 def load_book():
   with open('./shakespeare/samples.json') as f:
     return json.load(f)
-
 
 def check(keystroke, counter, lines_to_check):
   def check_line(line):
@@ -25,8 +20,6 @@ def check(keystroke, counter, lines_to_check):
         return False
     return False
 
-
-  #refactored code below to reduce lengthy varaibles
   new_lines_to_check = {"works": []}
 
   for work in lines_to_check["works"]: 
