@@ -28,3 +28,10 @@ end
  
 #Simlilar attempts link https://www.telegraph.co.uk/technology/news/8789894/Monkeys-at-typewriters-close-to-reproducing-Shakespeare.html
 
+#To run server 
+# export FLASK_APP=server.py
+# $ python -m flask run
+######
+#export FLASK_APP=controller.py
+#export FLASK_ENV=development
+#flask run
