@@ -35,3 +35,6 @@ end
 #export FLASK_APP=controller.py
 #export FLASK_ENV=development
 #flask run
+#####
+created a shell file to run all above commands 
+#to run the app use `bash start.sh`

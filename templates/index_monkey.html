@@ -4,20 +4,20 @@
         <meta charset="utf-8">
         <title>Monkey Typing</title>
     </head>
+    <script>
+           function longest(){
+                fetch('http://localhost:5000/match')
+                .then( res => res.json())
+                .then(result =>{
+                    
+                    console.log("the result is ", result)                
+                }).catch( e => {console.log(e)})
+           }
+        </script>
     <body>
         <h1>Monkey Typing</h1>
-        <p>Hello Monkey world</p>
-        <h3>Longest match</h3>
-        <button onClick={longest} type="button">Get the longest </button>
+        <button onClick={longest()} type="button">Get the longest </button>
+        <div>{% block content %}{% endblock %}</div> 
     </body>
-    <script>
-        const longest = fetch('http://localhost:4545/')
-            .then( res => res.json)
-            .then(result =>{
-                if (result.status == 200){
-                    console.log(result.body)
-                }
-            }).catch()
-
-    </script>
+   
 </html>
