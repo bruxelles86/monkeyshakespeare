@@ -1,11 +1,9 @@
 {% extends 'index_monkey.html' %}
 {% block content %}
-<hr>
-<p>Child here</p>
-<h2>{% block title %} Longest matches {% endblock %}</h2>
-{% for item in data %}
-    <ul>
-        <li>{{ item }}</li>
-    </ul>
-{% endfor %}
+<h2>{% block title %} The Longest Matched Words So Far {% endblock %}</h2>
+<ul class="list">
+    {% for item in data %}
+    <li>{{ item }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}

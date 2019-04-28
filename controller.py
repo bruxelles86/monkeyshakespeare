@@ -32,7 +32,7 @@ def generate_keystroke():
 
 def save_matched_lines(line):
   f = open('./data.txt', "a+")
-  f.write(f"{line},")
+  f.write(line + ",")
   f.close()
 
 while True:    

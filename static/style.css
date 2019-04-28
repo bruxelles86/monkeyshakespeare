@@ -1,0 +1,45 @@
+header {
+    width: 100%;
+    height: 20rem;
+    background: grey;
+    border-bottom: 5px solid rgba(10, 2, 2, 0.534);
+}
+#title {
+    text-align: center;
+    position: relative;
+    top: 7rem;
+}
+button {
+    position: relative;
+    top: 10rem;
+    left: 41.5%;
+}
+div.content {
+    position: relative;
+    left: 25%;
+    width: 50%;
+}
+h2 {
+    text-align: center;
+}
+li{
+    padding: 5px;
+    margin:  4px;
+    border-bottom: 1px solid #c88c8c;
+}
+body {
+    min-width: 350px;
+    background: #fbf7b6;
+}
+@media all and (max-width: 599px) and (min-width: 200px){
+    button {
+        position: relative;
+        top: 10rem;
+        left: 20%;
+    }
+    div.content {
+        position: relative;
+        left: 2%;
+        width: 100%;
+    }
+}

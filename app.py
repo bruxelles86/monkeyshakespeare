@@ -8,7 +8,7 @@ app = Flask(__name__)
 def get_matched_words():
   with open("./data.txt") as f:
     content = f.read()
-    matches = content.split(',')
+    matches = content.split(",")
     return matches
 
 @app.route('/')
