@@ -38,3 +38,7 @@ end
 #####
 created a shell file to run all above commands 
 #to run the app use `bash start.sh`
+
+Things that need solving are:
+- issue of paraller process: i.e server to response with longest match whilst monkey typed matched keystrokes  keep redefining longest match. 
+- Theres seems to be issue with randomness as matched words keep on re apearing 

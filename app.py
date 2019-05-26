@@ -1,4 +1,3 @@
-import multiprocessing
 from flask import Flask
 from flask import render_template
 from flask import jsonify
@@ -21,6 +20,8 @@ def display_longest_match():
 
 @app.route('/match')
 def get_match():
-  data = get_matched_words()  
-  return  jsonify(data)
+  data = get_matched_words()
+  data.sort(key=len)
+  longst= data[-1]
+  return  jsonify(longst)
 

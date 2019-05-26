@@ -15,20 +15,15 @@
       }).catch( e => {console.log(e)})
     }
     function displyer(data){
-      const content = document.querySelector('.list');
-    
-      for(i=0; i < data.length; i++ ){
-        node = document.createElement("Li");
-        text = document.createTextNode(data[i])
-        node.appendChild(text)
-        content.appendChild(node)
-      }  
+      const content = document.querySelector('#longest-word');
+      content.innerHTML = data  
     }
   </script>
   <body>
     <header>
       <h1 id="title">Monkey Typing</h1>
-      <button onClick={longest()} type="button">Get the longest </button>
+      <button onClick={longest()} type="button">Check for longest word </button>
+      <h3 id="longest-word"></h3>
     </header>        
   <div class="content">
     {% block content %}

@@ -4,7 +4,7 @@ header {
     background: grey;
     border-bottom: 5px solid rgba(10, 2, 2, 0.534);
 }
-#title {
+#title, #longest-word{
     text-align: center;
     position: relative;
     top: 7rem;
@@ -19,9 +19,10 @@ div.content {
     left: 25%;
     width: 50%;
 }
-h2 {
+h2, h3 {
     text-align: center;
 }
+#longest-word{ top: 11rem; }
 li{
     padding: 5px;
     margin:  4px;
